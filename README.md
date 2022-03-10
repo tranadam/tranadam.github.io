@@ -1,1 +1,1 @@
-"# tranadam.github.io" 
+www.adamtran.cz
