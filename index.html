@@ -1,121 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Adam Tran | Frontend Dev</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap"
-      rel="stylesheet"
-    />
-    <style>
-      * {
-        margin: 0;
-      }
 
-      body {
-        background-color: #252525;
-        font-family: "Montserrat", sans-serif;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adam Tran | Frontend Dev</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+    }
 
-      .container {
-        display: -ms-grid;
-        display: grid;
-        place-items: center;
-        height: 100vh;
-        width: 100%;
-      }
+    body {
+      background-color: #252525;
+      font-family: "Montserrat", sans-serif;
+    }
 
+    .container {
+      display: -ms-grid;
+      display: grid;
+      place-items: center;
+      height: 100vh;
+      width: 100%;
+    }
+
+    .wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      gap: 2em;
+    }
+
+    @media only screen and (min-width: 500px) {
       .wrap {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: reverse;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        gap: 2em;
-      }
-      @media only screen and (min-width: 500px) {
-        .wrap {
-          -webkit-box-orient: horizontal;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: row;
-          flex-direction: row;
-        }
-      }
-
-      .portrait {
-        width: 10em;
-        border-radius: 50%;
-        outline: 2px solid #6d6d6d;
-        outline-offset: 6px;
-      }
-
-      .text-side {
-        color: #fff;
-        font-weight: 400;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
+        -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        gap: 0.4em;
+        -ms-flex-direction: row;
+        flex-direction: row;
       }
+    }
 
-      .name {
-        margin-bottom: 0.2em;
-      }
+    .photo-side {
+      position: relative;
+    }
 
-      .social-link {
-        display: block;
-        color: inherit;
-      }
+    .photo-side::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      height: 106%;
+      width: 106%;
+      transform: translate(-50%, -50%);
+      border: 2px solid #6d6d6d;
+      border-radius: 50%;
+    }
 
-      .social-link:hover,
-      .social-link:focus {
-        text-decoration: none;
-      }
+    .portrait {
+      width: 10em;
+      border-radius: 50%;
+    }
 
-      .social-link:active {
-        opacity: 0.8;
-      }
-    </style>
-  </head>
-  <body>
-    <main>
-      <div class="container">
-        <div class="wrap">
-          <div class="photo-side">
-            <img
-              src="assets/portrait-min.jpg"
-              class="portrait"
-              alt="Portrait of Adam Tran"
-            />
-          </div>
-          <div class="text-side">
-            <h1 class="name">Adam Tran</h1>
-            <p class="sub-head">Frontend developer</p>
-            <a href="https://github.com/tranadam" class="social-link"
-              >github.com/tranadam</a
-            >
-            <a href="mailto:adam@tdtran.cz" class="social-link"
-              >adam@tdtran.cz</a
-            >
-          </div>
+    .text-side {
+      color: #fff;
+      font-weight: 400;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      gap: 0.4em;
+    }
+
+    .name {
+      margin-bottom: 0.2em;
+    }
+
+    .social-link {
+      display: block;
+      color: inherit;
+    }
+
+    .social-link:hover,
+    .social-link:focus {
+      text-decoration: none;
+    }
+
+    .social-link:active {
+      opacity: 0.8;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <div class="container">
+      <div class="wrap">
+        <div class="photo-side">
+          <img src="assets/portrait-min.jpg" class="portrait" alt="Portrait of Adam Tran" />
+        </div>
+        <div class="text-side">
+          <h1 class="name">Adam Tran</h1>
+          <p class="sub-head">Frontend developer</p>
+          <a href="https://github.com/tranadam" class="social-link">github.com/tranadam</a>
+          <a href="mailto:adam@tdtran.cz" class="social-link">adam@tdtran.cz</a>
         </div>
       </div>
-    </main>
-  </body>
+    </div>
+  </main>
+</body>
+
 </html>
